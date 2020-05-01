@@ -89,4 +89,11 @@ The user can also export the [surface mesh](example/purkinje.off) for postproces
 ./SWCMesher example/purkinje.swc --surfmesh
 ```
 ![Mesh visualization in Meshlab](example/surface.png)
+
+Different parameters can be adjusted to generate a mesh with higher resolution, mainly
+`fc-size`, `fc-distance` and `cc-size`.
+
+```
+./SWCMesher ../example/purkinje.swc  --fc-distance 0.075 --cc-size 0.5
+```
  
