@@ -7,6 +7,9 @@ morphology can also be exported in the process.
 Note that this program doesn't detect branch intersection of the SWC morphology. Thus a 
 curation step for the raw SWC data may be required before using the program.
 
+This program can not generate tetrahedral mesh from triangular surface meshes commonly
+generated from Electron Microscopic (EM) imaging. For this purpose please visit [https://github.com/CNS-OIST/MultiCompMesher](https://github.com/CNS-OIST/MultiCompMesher).
+
 # Prerequisite
 * git
 * a C++ compiler
@@ -56,7 +59,7 @@ The usage of these parameters can be found in the
 
 If [Intel's TBB library](https://software.intel.com/en-us/tbb) is installed and found, 
 the program will try to use [concurrency mode](https://github.com/CGAL/cgal/wiki/Concurrency-in-CGAL) 
-for meshing. User can disable it and use sequential mode instead by setting the `ACTIVATE_CONCURRENCY` flag in compilation
+for meshing. User can disable it and uses sequential mode instead by setting the `ACTIVATE_CONCURRENCY` flag in compilation
 
 ```
 cmake -DACTIVATE_CONCURRENCY=OFF ..
