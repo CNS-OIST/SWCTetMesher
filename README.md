@@ -81,7 +81,7 @@ in Gmsh. Note that each component are labelled and colored individually. To use 
 export it to the Abaqus inp format or the Gmsh 2.0 ASCii format in Gmsh.
 ![Mesh visualization in Gmsh](example/mesh_view.png)
 
-The user can also export the surface mesh for postprocessing or visualization in applications such as [Meshlab](http://www.meshlab.net/).
+The user can also export the [surface mesh](example/purkinje.off) for postprocessing or visualization in applications such as [Meshlab](http://www.meshlab.net/).
 ```
 ./SWCMesher example/purkinje.swc --surfmesh
 ```
