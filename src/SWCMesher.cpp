@@ -71,7 +71,7 @@ typedef CGAL::Mesh_criteria_3<Tr> Mesh_criteria;
 typedef Mesh_criteria::Facet_criteria    Facet_criteria;
 typedef Mesh_criteria::Cell_criteria     Cell_criteria;
 
-typedef bg::model::point<float, 3, bg::cs::cartesian> sp_point;
+typedef bg::model::point<double, 3, bg::cs::cartesian> sp_point;
 typedef bg::model::box<sp_point> sp_box;
 typedef std::pair<sp_box, uint> sp_value;
 

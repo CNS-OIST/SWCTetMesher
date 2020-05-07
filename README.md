@@ -4,8 +4,8 @@ This program reads a SWC morphology file (`.swc`) and generates a tetrahedral me
 spherical interpolation of the morphology. A watertight triangular surface mesh of the 
 morphology can also be exported in the process.
 
-Note that this program doesn't detect branch intersection of the SWC morphology. Thus a 
-curation step for the raw SWC data may be required before using the program.
+This program doesn't detect branch intersection of the SWC morphology. For this procedure, 
+please visit [https://github.com/CNS-OIST/SWCIntersectDetect](https://github.com/CNS-OIST/SWCIntersectDetect).
 
 This program can not generate tetrahedral mesh from triangular surface meshes commonly
 generated from Electron Microscopic (EM) imaging. For this purpose please visit [https://github.com/CNS-OIST/MultiCompMesher](https://github.com/CNS-OIST/MultiCompMesher).
