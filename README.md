@@ -5,7 +5,7 @@ spherical interpolation of the morphology. A watertight triangular surface mesh 
 morphology can also be exported in the process.
 
 This program doesn't detect branch intersection of the SWC morphology. For this procedure, 
-please visit [https://github.com/CNS-OIST/SWCIntersectDetect](https://github.com/CNS-OIST/SWCIntersectDetect).
+please visit [https://github.com/CNS-OIST/SWCIntersectDetect](https://github.com/CNS-OIST/SWCIntersectDetect)
 
 This program can not generate tetrahedral mesh from triangular surface meshes commonly
 generated from Electron Microscopic (EM) imaging. For this purpose please visit [https://github.com/CNS-OIST/MultiCompMesher](https://github.com/CNS-OIST/MultiCompMesher).
@@ -19,8 +19,8 @@ generated from Electron Microscopic (EM) imaging. For this purpose please visit 
 
 # Compilation
 ```
-git clone https://github.com/CNS-OIST/SWCMesher.git
-cd SWCMesher
+git clone https://github.com/CNS-OIST/SWCTetMesher.git
+cd SWCTetMesher
 mkdir build
 cd build
 cmake ..
@@ -28,11 +28,11 @@ make
 ```
 
 # Usage
-Below commands assume you are still in `SWCMesher/build`
+Below commands assume you are still in `SWCTetMesher/build`
     
 * Basic usage
     ```
-    ./SWCMesher SWC-FILE
+    ./SWCTetMesher SWC-FILE
     ```
     * SWC-FILE: A `.swc` morphology reconstruction file. 
     
@@ -50,7 +50,7 @@ Other parameters can be set to control the meshing process and optimize the mesh
 You can list them using
 
 ```
-./SWCMesher -h
+./SWCTetMesher -h
 ```
 The usage of these parameters can be found in the 
 [CGAL 3D mesh generation manual](https://doc.cgal.org/latest/Mesh_3/index.html).
@@ -75,9 +75,9 @@ We can visualize the morphology in [neuTube](https://www.neutracing.com/)
 
 The command to generate the mesh is
 ```
-# assume still in SWCMesher/build
+# assume still in SWCTetMesher/build
 
-./SWCMesher example/purkinje.swc
+./SWCTetMesher example/purkinje.swc
 ```
 The mesh is written to [purkinje.mesh](example/purkinje.mesh), then visualized
 in Gmsh. Note that each component are labelled and colored individually. To use the mesh in [STEPS](http://steps.sourceforge.net), the user need to
@@ -86,7 +86,7 @@ export it to the Abaqus inp format or the Gmsh 2.0 ASCii format in Gmsh.
 
 The user can also export the [surface mesh](example/purkinje.off) for postprocessing or visualization in applications such as [Meshlab](http://www.meshlab.net/).
 ```
-./SWCMesher example/purkinje.swc --surfmesh
+./SWCTetMesher example/purkinje.swc --surfmesh
 ```
 ![Mesh visualization in Meshlab](example/surface.png)
 
@@ -94,6 +94,6 @@ Different parameters can be adjusted to generate a mesh with higher resolution, 
 `fc-size`, `fc-distance` and `cc-size`.
 
 ```
-./SWCMesher ../example/purkinje.swc  --fc-distance 0.075 --cc-size 0.5
+./SWCTetMesher ../example/purkinje.swc  --fc-distance 0.075 --cc-size 0.5
 ```
  
