@@ -127,25 +127,25 @@ int main(int argc, char *argv[]) {
         "Cell criteria - Size")("odt", po::bool_switch()->default_value(false),
                                 "Enable ODT mesh optimization")(
         "odt-time", po::value<double>()->default_value(10.0f, "10.0"),
-        "Time limit for ODT mesh optimization, in second")(
+        "Time limit for ODT mesh optimization, in seconds")(
         "lloyd", po::bool_switch()->default_value(false),
         "Enable Lloyd mesh optimization")(
         "lloyd-time", po::value<double>()->default_value(10.0f, "10.0"),
-        "Time limit for Lloyd mesh optimization, in second")(
+        "Time limit for Lloyd mesh optimization, in seconds")(
         "perturb", po::bool_switch()->default_value(false),
         "Enable mesh sliver perturbation")(
         "perturb-time", po::value<double>()->default_value(10.0f, "10.0"),
-        "Time limit for sliver perturbation, in second")(
+        "Time limit for sliver perturbation, in seconds")(
         "perturb-bound", po::value<double>()->default_value(0.0f, "0.0"),
         "Targeted lower bound on dihedral angles of mesh cells for sliver "
-        "perturbation, in degree")("exude",
+        "perturbation, in degrees")("exude",
                                    po::bool_switch()->default_value(false),
                                    "Enable mesh sliver exudation")(
         "exude-time", po::value<double>()->default_value(10.0f, "10.0"),
-        "Time limit for sliver exudation, in second")(
+        "Time limit for sliver exudation, in seconds")(
         "exude-bound", po::value<double>()->default_value(0.0f, "0.0"),
         "Targeted lower bound on dihedral angles of mesh cells for sliver "
-        "exudation, in degree");
+        "exudation, in degrees");
 
     po::positional_options_description p;
     p.add("input", 1);

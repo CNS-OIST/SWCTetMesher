@@ -2,12 +2,12 @@
 
 This program reads a SWC morphology file (`.swc`) and generates a tetrahedral mesh using 
 spherical interpolation of the morphology. A watertight triangular surface mesh of the 
-morphology can also be exported in the process.
+morphology can also be exported during the process.
 
 This program doesn't detect branch intersection of the SWC morphology. For this procedure, 
 please visit [https://github.com/CNS-OIST/SWCIntersectDetect](https://github.com/CNS-OIST/SWCIntersectDetect)
 
-This program can not generate tetrahedral mesh from triangular surface meshes commonly
+This program can not generate tetrahedral meshes from triangular surface meshes commonly
 generated from Electron Microscopic (EM) imaging. For this purpose please visit [https://github.com/CNS-OIST/MultiCompMesher](https://github.com/CNS-OIST/MultiCompMesher).
 
 # Prerequisite
@@ -28,7 +28,7 @@ make
 ```
 
 # Usage
-Below commands assume you are still in `SWCTetMesher/build`
+The commands below assume you are still in `SWCTetMesher/build`
     
 * Basic usage
     ```
@@ -43,8 +43,8 @@ Below commands assume you are still in `SWCTetMesher/build`
 
 * Advance options  
     * `--output OUTPUT-FILE`, or `-o OUTPUT-FILE`: Change the output location of the tetrahedral mesh. If `OUTPUT-FILE` doesn't end with `.mesh`, this suffix will be appended.
-    * `--surfmesh`: Also output the triangular surface mesh. If enable, the surface mesh will be written to `OUTPUT-FILE.off`
-    * `interp-distance`: Maximum distance between two spheres in the interpolation. Shorter distance results in more accurate interpolation, but longer meshing time.
+    * `--surfmesh`: Also output the triangular surface mesh. If enabled, the surface mesh will be written to `OUTPUT-FILE.off`
+    * `interp-distance`: Maximum distance between two spheres in the interpolation. A shorter distance results in a more accurate interpolation, but longer meshing time.
     
 Other parameters can be set to control the meshing process and optimize the mesh quality. 
 You can list them using
@@ -59,7 +59,7 @@ The usage of these parameters can be found in the
 
 If [Intel's TBB library](https://software.intel.com/en-us/tbb) is installed and found, 
 the program will try to use [concurrency mode](https://github.com/CGAL/cgal/wiki/Concurrency-in-CGAL) 
-for meshing. User can disable it and uses sequential mode instead by setting the `ACTIVATE_CONCURRENCY` flag in compilation
+for meshing. Users can disable it and use sequential mode instead by setting the `ACTIVATE_CONCURRENCY` flag during compilation
 
 ```
 cmake -DACTIVATE_CONCURRENCY=OFF ..
@@ -75,12 +75,12 @@ We can visualize the morphology in [neuTube](https://www.neutracing.com/)
 
 The command to generate the mesh is
 ```
-# assume still in SWCTetMesher/build
+# assumed still in SWCTetMesher/build
 
 ./SWCTetMesher example/purkinje.swc
 ```
 The mesh is written to [purkinje.mesh](example/purkinje.mesh), then visualized
-in Gmsh. Note that each component are labelled and colored individually. To use the mesh in [STEPS](http://steps.sourceforge.net), the user need to
+in Gmsh. Note that each component is labeled and colored individually. To use the mesh in [STEPS](http://steps.sourceforge.net), the user needs to
 export it to the Abaqus inp format or the Gmsh 2.0 ASCii format in Gmsh.
 ![Mesh visualization in Gmsh](example/mesh_view.png)
 

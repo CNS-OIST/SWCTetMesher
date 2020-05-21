@@ -110,7 +110,7 @@ MorphData::MorphData(const std::string &swc_file) {
         }
       } else {
         throw std::runtime_error(
-            std::string("ERROR: Unable to parser swc data line ") + line +
+            std::string("ERROR: Unable to parse swc data line ") + line +
             "\n");
       }
     }
