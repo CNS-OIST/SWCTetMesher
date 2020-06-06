@@ -85,7 +85,7 @@ MorphData::MorphData(const std::string &swc_file) {
         std::shared_ptr<Segment> seg_ptr;
         if (previous == -1) {
 
-          seg_ptr = std::make_shared<Segment>(Segment(idx, type, start, end));
+          seg_ptr = std::make_shared<Segment>(Segment(idx, type, end, end));
           rootSegments.push_back(seg_ptr);
         } else {
           auto previous_seg = segments.find(previous);
